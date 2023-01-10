@@ -32,59 +32,61 @@ function playRound(playerSelection, computerSelection)
    {
     if(computerSelection == "rock")
     {
-        console.log("Computer chose rock...")
-        results = "Draw!"
+        console.log("Computer chose rock...");
+        results = "Draw!";
     }
     else if(computerSelection == "paper")
     {
-        console.log("Computer chose paper...")
-        results = "You Lose!"
+        console.log("Computer chose paper...");
+        results = "You Lose!";
     } 
     else if(computerSelection == "scissors")
      {
-        console.log("Computer chose scissors...")
-         results = "You Win!"
+        console.log("Computer chose scissors...");
+         results = "You Win!";
      }
     }
     
-    if(playerSelection == "paper")
+    else if(playerSelection == "paper")
     {
      if(computerSelection == "rock")
      {
-        console.log("Computer chose rock...")
-         results = "You Win!"
+        console.log("Computer chose rock...");
+         results = "You Win!";
      }
      else if(computerSelection == "paper")
      {
-        console.log("Computer chose paper...")
-         results = "Draw!"
+        console.log("Computer chose paper...");
+         results = "Draw!";
      } 
      else if(computerSelection == "scissors")
       {
-        console.log("Computer chose scissors...")
-          results = "You Lose!"
+        console.log("Computer chose scissors...");
+          results = "You Lose!";
       }
      }
 
-     if(playerSelection == "scissors")
+    else if(playerSelection == "scissors")
     {
      if(computerSelection == "rock")
      {
-        console.log("Computer chose rock...")
-         results = "You Lose!"
+        console.log("Computer chose rock...");
+         results = "You Lose!";
      }
      else if(computerSelection == "paper")
      {
-        console.log("Computer chose paper...")
-         results = "You Win!"
+        console.log("Computer chose paper...");
+         results = "You Win!";
      } 
      else if(computerSelection == "scissors")
       {
-        console.log("Computer chose scissors...")
-          results = "Draw!"
+        console.log("Computer chose scissors...");
+          results = "Draw!";
       }
     }
-
+    else{
+        return results = "Error - try again";
+    }
     return results;
 
 }
@@ -96,6 +98,13 @@ function game()
 {
     for( let i = 0; i<5;i++)
     {
+        let playerChoiceSensitive = prompt("Enter rock, paper, or scissors:");
+    let playerChoiceInsensitive = playerChoiceSensitive.toLowerCase();
+    let compChoice = getComputerChoice();
+    console.log(playerChoiceInsensitive);
+    console.log(playRound(playerChoiceInsensitive,compChoice));
 
     }
 }
+
+game();
