@@ -33,13 +33,48 @@ function playRound(playerSelection, computerSelection)
     {
         results = "Draw!"
     }
-    else if(playerSelection == "rock" && computerSelection == "paper")
+    else if(computerSelection == "paper")
     {
         results = "You Lose!"
     } 
-    else if(playerSelection == "rock" && computerSelection == "scissors")
+    else if(computerSelection == "scissors")
      {
          results = "You Win!"
      }
-   
+    }
+    
+    if(playerSelection == "paper")
+    {
+     if(computerSelection == "rock")
+     {
+         results = "You Win!"
+     }
+     else if(computerSelection == "paper")
+     {
+         results = "Draw!"
+     } 
+     else if(computerSelection == "scissors")
+      {
+          results = "You Lose!"
+      }
+     }
+
+     if(playerSelection == "scissors")
+    {
+     if(computerSelection == "rock")
+     {
+         results = "You Lose!"
+     }
+     else if(computerSelection == "paper")
+     {
+         results = "You Win!"
+     } 
+     else if(computerSelection == "scissors")
+      {
+          results = "Draw!"
+      }
+    }
+
+    return results;
+
 }
