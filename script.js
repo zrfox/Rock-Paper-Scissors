@@ -20,7 +20,8 @@ function getComputerChoice()
     }
 }
 
-let playerChoice = toLowerCase(prompt("Enter rock, paper, or scissors:"));
+let playerChoiceSensitive = prompt("Enter rock, paper, or scissors:");
+let playerChoiceInsensitive = playerChoiceSensitive.toLowerCase;
 let compChoice = getComputerChoice();
 let results;
 console.log(compChoice);
