@@ -20,11 +20,6 @@ function getComputerChoice()
     }
 }
 
-let playerChoiceSensitive = prompt("Enter rock, paper, or scissors:");
-let playerChoiceInsensitive = playerChoiceSensitive.toLowerCase();
-let compChoice = getComputerChoice();
-let results = "Error - try again.";
-console.log(playerChoiceInsensitive);
 
 function playRound(playerSelection, computerSelection)
 {
@@ -91,7 +86,6 @@ function playRound(playerSelection, computerSelection)
 
 }
 
-console.log(playRound(playerChoiceInsensitive,compChoice));
 
 
 function game()
