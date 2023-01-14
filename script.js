@@ -90,15 +90,7 @@ function playRound(playerSelection, computerSelection)
 
 function game()
 {
-    for( let i = 0; i<5;i++)
-    {
-        let playerChoiceSensitive = prompt("Enter rock, paper, or scissors:");
-    let playerChoiceInsensitive = playerChoiceSensitive.toLowerCase();
-    let compChoice = getComputerChoice();
-    console.log(playerChoiceInsensitive);
-    console.log(playRound(playerChoiceInsensitive,compChoice));
-
-    }
+    
 }
 
 game();
