@@ -110,11 +110,22 @@ button1.addEventListener('click', ()=>{
     resultsDiv.textContent=newResults;
 });
 button2.addEventListener('click', ()=>{
-    console.log(playRound("paper",getComputerChoice()));
+    let newResults="";
+     newResults=playRound("paper",getComputerChoice());
+     resultsDiv.textContent=newResults;
  });
  button3.addEventListener('click', ()=>{
-    console.log(playRound("scissors",getComputerChoice()));
+    let newResults="";
+     newResults=playRound("scissors",getComputerChoice());
+     resultsDiv.textContent=newResults;
  });
+
+
+
+
+
+
+
 
 function game()
 {
