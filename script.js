@@ -17,7 +17,7 @@ button3.textContent='Scissors';
 container.appendChild(button3);
 
 
-const resultsDiv = document.querySelector('#results');
+const resultsDiv = document.querySelector('#resultsDiv');
 
 function getComputerChoice()
 {
@@ -105,7 +105,9 @@ function playRound(playerSelection, computerSelection)/*changed parameter name*/
 /*document.getElementsByName('button1').onclick = "playRound("rock", getComputerChoice())";
 */
 button1.addEventListener('click', ()=>{
-   console.log(playRound("rock",getComputerChoice()));
+   let newResults="";
+    newResults=playRound("rock",getComputerChoice());
+    resultsDiv.textContent=newResults;
 });
 button2.addEventListener('click', ()=>{
     console.log(playRound("paper",getComputerChoice()));
