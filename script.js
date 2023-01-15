@@ -1,7 +1,23 @@
 
+const container = document.querySelector('#container');
 
 
 
+
+const button1 = document.createElement('button');
+button1.textContent='Rock';
+container.appendChild(button1);
+
+const button2 = document.createElement('button');
+button2.textContent='Paper';
+container.appendChild(button2);
+
+const button3 = document.createElement('button');
+button3.textContent='Scissors';
+container.appendChild(button3);
+
+
+const resultsDiv = document.querySelector('#results');
 
 function getComputerChoice()
 {
@@ -21,7 +37,7 @@ function getComputerChoice()
 }
 
 
-function playRound(playerSelection, computerSelection)
+function playRound(playerSelection, computerSelection)/*changed parameter name*/
 {
    if(playerSelection == "rock")
    {
@@ -86,11 +102,22 @@ function playRound(playerSelection, computerSelection)
 
 }
 
-
+/*document.getElementsByName('button1').onclick = "playRound("rock", getComputerChoice())";
+*/
+button1.addEventListener('click', ()=>{
+   console.log(playRound("rock",getComputerChoice()));
+});
+button2.addEventListener('click', ()=>{
+    console.log(playRound("paper",getComputerChoice()));
+ });
+ button3.addEventListener('click', ()=>{
+    console.log(playRound("scissors",getComputerChoice()));
+ });
 
 function game()
 {
     
 }
 
-game();
+
+
