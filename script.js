@@ -104,21 +104,78 @@ function playRound(playerSelection, computerSelection)/*changed parameter name*/
 
 /*document.getElementsByName('button1').onclick = "playRound("rock", getComputerChoice())";
 */
+let playerScore = 0;
+let computerScore = 0;
+let roundCount = 0;
+let gameOverString = "";
+
 button1.addEventListener('click', ()=>{
    let newResults="";
+   if(playerScore==0&&computerScore ==0){
+    gameOverString="";
+}
     newResults=playRound("rock",getComputerChoice());
-    resultsDiv.textContent=newResults;
+    
+    if(newResults=="You Win!"){
+        playerScore++;
+    }
+    else if(newResults=="You Lose!"){
+        computerScore++;
+    }
+   if(playerScore==5 ||computerScore==5){
+        gameOverString = "Game Over! ";
+        playerScore=0;
+        computerScore=0;
+   }
+
+    resultsDiv.textContent= gameOverString+newResults+ " Player: " + playerScore + " Computer: " + computerScore;
+
+
 });
 button2.addEventListener('click', ()=>{
     let newResults="";
+    if(playerScore==0&&computerScore ==0){
+        gameOverString="";
+    }
      newResults=playRound("paper",getComputerChoice());
-     resultsDiv.textContent=newResults;
+
+     if(newResults=="You Win!"){
+        playerScore++;
+    }
+    else if(newResults=="You Lose!"){
+        computerScore++;
+    }
+   
+   if(playerScore==5 ||computerScore==5){
+        gameOverString = "Game Over! ";
+        playerScore=0;
+        computerScore=0;
+   }
+
+    resultsDiv.textContent= gameOverString+newResults+ " Player: " + playerScore + " Computer: " + computerScore;
  });
  button3.addEventListener('click', ()=>{
     let newResults="";
+    if(playerScore==0&&computerScore ==0){
+        gameOverString="";
+    }
      newResults=playRound("scissors",getComputerChoice());
-     resultsDiv.textContent=newResults;
- });
+
+     if(newResults=="You Win!"){
+        playerScore++;
+    }
+    else if(newResults=="You Lose!"){
+        computerScore++;
+    }
+   if(playerScore==5 ||computerScore==5){
+        gameOverString = "Game Over! ";
+        playerScore=0;
+        computerScore=0;
+   }
+
+    resultsDiv.textContent= gameOverString+newResults+ " Player: " + playerScore + " Computer: " + computerScore;
+
+    });
 
 
 
